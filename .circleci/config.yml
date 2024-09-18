@@ -5,4 +5,6 @@ jobs:
       - image: cimg/base:stable
     resource_class: arm.medium
     steps:
+      - setup_remote_docker:
+          docker_layer_caching: true
       - run: echo "hello, world"
